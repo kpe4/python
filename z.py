@@ -1,6 +1,6 @@
 # n1
 with open("numbers.txt", "w", encoding="utf-8") as file:
-    for i in range(1, 11):
+    for i in range(1, 1001):
             file.write(f"{i}\n")
 
 # n2
