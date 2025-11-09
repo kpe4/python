@@ -3,15 +3,12 @@ class Entity:
 
     #метод _init_ - конструктор который вызывается при создании обьекта
     def __init__ (self, name, health, attack_power):
-        # ссылка на сам объект (на самого себя)
-        # name, health, attack_power - параметры которые передаем при создании объекта
 
-        self.name = name # просто даем имя персонажу
+
+        self.name = name
         self.health = health
         self.attack_power = attack_power
         self.healer = healer
-        # level - параметр который не задается при создании объекта т е он будет иметь значение по умолчанию
-        # и мы его будем рег прогаммно
         self.level = 1
 
         print(f"Character {self.name} is created! Health: {self.health} | Attack: {self.attack_power}")
@@ -41,3 +38,10 @@ pablo = Entity("Pablo", 50, 10)
 hero1.attack(pablo)
 
 pablo.attack(hero1)
+
+# heal
+hero1 = Entity("Azazin Kreet", 80, 25)
+hero2 = Entity("Kamradio", 60, 15)
+
+hero1.attack(hero2)
+hero2.heal(20)  # Kamradio похилился на 20
